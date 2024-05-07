@@ -14,16 +14,18 @@ export default function Index({ hotelDetails }: { hotelDetails: any }) {
         }
         canonicalUrl={"staybook.in"}
       />
-      <div>
-        <Image
-          width={126}
-          height={126}
-          src={hotelDetails.hotel_Image_Url}
-          alt="img"
-        />
-        <p>{hotelDetails.hotel_Name}</p>
-        <p>{hotelDetails.hotel_Description_List}</p>
-      </div>
+      <section>
+        <div>
+          <Image
+            width={126}
+            height={126}
+            src={hotelDetails.hotel_Image_Url}
+            alt="img"
+          />
+          <p>{hotelDetails.hotel_Name}</p>
+          <p>{hotelDetails.hotel_Description_List}</p>
+        </div>
+      </section>
     </>
   );
 }
