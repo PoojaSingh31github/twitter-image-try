@@ -1,10 +1,17 @@
 import axios from "axios";
 import { GetServerSidePropsContext } from "next";
+import Image from "next/image";
 
 export default function Index({ hotelDetails }: { hotelDetails: any }) {
   return (
     <div>
-      hotel data : {JSON.stringify(hotelDetails.hotel_Image_Url, null, 2)}
+      <Image
+        width={126}
+        height={126}
+        src={hotelDetails.hotel_Image_Url}
+        alt="img"
+      />
+      <p>{hotelDetails.hotel_Name}</p>
     </div>
   );
 }
@@ -16,6 +23,7 @@ async function getHotelDetails(hotelSlug: string) {
         hotelSlug
       )}`
     );
+    console.log(res);
     return res.data;
   } catch (error) {
     console.error("Error fetching hotel details:", error);
@@ -26,8 +34,15 @@ async function getHotelDetails(hotelSlug: string) {
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   const hotelId = context.query.hotelInfo;
   const hotelSlug = typeof hotelId === "string" ? hotelId : "";
-
   const hotelDetails = await getHotelDetails(hotelSlug);
+  //   console.log(
+  //     hotelId,
+  //     "hotel_Id",
+  //     hotelSlug,
+  //     "hotelSlug",
+  //     hotelDetails,
+  //     "hotelDetails"
+  //   );
 
   return {
     props: {

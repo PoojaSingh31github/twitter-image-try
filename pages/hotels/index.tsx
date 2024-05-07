@@ -4,11 +4,11 @@ import React from "react";
 
 type Props = {};
 
-export default function index({ }: Props) {
-   const router = useRouter();
-  const handlehotels  = (hotelInfo: string) => {
+export default function index({}: Props) {
+  const router = useRouter();
+  const handlehotels = (hotelInfo: string) => {
     router.push(`/hotels/${hotelInfo}`);
-  }
+  };
   return (
     <>
       <CustomHotelHeader
@@ -19,9 +19,9 @@ export default function index({ }: Props) {
         }
         canonicalUrl={"staybook.in"}
       />
-          <section>
+      <section>
         <h1>hotel pageeee</h1>
-        <button onClick={() => handlehotels("jai bala ji")}>click</button>
+        <button onClick={() => handlehotels("staybook-hotel-jai-balaji-new-delhi-railway-station-new-delhi")}>click</button>
       </section>
     </>
   );
