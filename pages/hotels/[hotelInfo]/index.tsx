@@ -12,6 +12,7 @@ export default function Index({ hotelDetails }: { hotelDetails: any }) {
         alt="img"
       />
       <p>{hotelDetails.hotel_Name}</p>
+      <p>{hotelDetails.hotel_Description_List}</p>
     </div>
   );
 }

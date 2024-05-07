@@ -1,14 +1,7 @@
 import CustomHotelHeader from "@/components/headers/CustomHotelHeader";
-import { useRouter } from "next/router";
-import React from "react";
+import Link from "next/link";
 
-type Props = {};
-
-export default function index({}: Props) {
-  const router = useRouter();
-  const handlehotels = (hotelInfo: string) => {
-    router.push(`/hotels/${hotelInfo}`);
-  };
+export default function index() {
   return (
     <>
       <CustomHotelHeader
@@ -21,7 +14,9 @@ export default function index({}: Props) {
       />
       <section>
         <h1>hotel pageeee</h1>
-        <button onClick={() => handlehotels("staybook-hotel-jai-balaji-new-delhi-railway-station-new-delhi")}>click</button>
+        <Link href="/hotels/staybook-hotel-jai-balaji-new-delhi-railway-station-new-delhi">
+          click
+        </Link>
       </section>
     </>
   );
