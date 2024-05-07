@@ -1,9 +1,14 @@
 import CustomHotelHeader from "@/components/headers/CustomHotelHeader";
+import { useRouter } from "next/router";
 import React from "react";
 
 type Props = {};
 
-export default function index({}: Props) {
+export default function index({ }: Props) {
+   const router = useRouter();
+  const handlehotels  = (hotelInfo: string) => {
+    router.push(`/hotels/${hotelInfo}`);
+  }
   return (
     <>
       <CustomHotelHeader
@@ -15,7 +20,8 @@ export default function index({}: Props) {
         canonicalUrl={"staybook.in"}
       />
           <section>
-              <h1>hotel pageeee</h1>
+        <h1>hotel pageeee</h1>
+        <button onClick={() => handlehotels("jai bala ji")}>click</button>
       </section>
     </>
   );

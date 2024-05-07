@@ -24,7 +24,7 @@ export default function CustomHotelHeader(props: Props) {
       <meta property="og:image" content={props.metaImageUrl} />
       <meta property="og:url" content={props.canonicalUrl} />
       <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Staybook" />
+      <meta property="og:site_name" content="Staybook"/>
     </Head>
   );
 }
