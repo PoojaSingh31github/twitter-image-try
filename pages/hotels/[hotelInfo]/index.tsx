@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 export default function Index({ hotelDetails }: { hotelDetails: any }) {
   const router = useRouter();
-  console.log(router.query.hotelInfo);
+
   return (
     <>
       <CustomHotelHeader
@@ -25,7 +25,7 @@ export default function Index({ hotelDetails }: { hotelDetails: any }) {
             ? hotelDetails.hotel_Image_Url
             : "https://images.staybook.in/Staybook-Hotel-Jai-Balaji-New-Delhi-Railway-Station/StaybookJaibalaji_reception_1.jpg"
         }
-        canonicalUrl={`https://twitter-image-try-poojasingh31githubs-projects.vercel.app/hotels/${router.query.hotelInfo}`}
+        canonicalUrl={`https://twitter-image-try.vercel.app//hotels/${router.query.hotelInfo}`}
       />
       <section>
         <div>
@@ -61,14 +61,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   const hotelId = context.query.hotelInfo;
   const hotelSlug = typeof hotelId === "string" ? hotelId : "";
   const hotelDetails = await getHotelDetails(hotelSlug);
-  //   console.log(
-  //     hotelId,
-  //     "hotel_Id",
-  //     hotelSlug,
-  //     "hotelSlug",
-  //     hotelDetails,
-  //     "hotelDetails"
-  //   );
 
   return {
     props: {
