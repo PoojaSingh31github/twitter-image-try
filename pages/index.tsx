@@ -9,7 +9,7 @@ export default function index({}: Props) {
     <>
       <CustomHotelHeader
         hotelName={"jai bala ji "}
-        metaDescription={"descrriptions"}
+        metaDescription={"descrriptions for hoome page"}
         metaImageUrl={
           "https://images.staybook.in/Staybook-Hotel-Jai-Balaji-New-Delhi-Railway-Station/StaybookJaibalaji_reception_1.jpg"
         }
