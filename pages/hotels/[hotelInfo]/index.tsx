@@ -11,7 +11,9 @@ export default function Index({ hotelDetails }: { hotelDetails: any }) {
     <>
       <CustomHotelHeader
         hotelName={
-          hotelDetails.hotel_Name ? hotelDetails.hotel_Name : "Staybook hotel name"
+          hotelDetails.hotel_Name
+            ? hotelDetails.hotel_Name
+            : "Staybook hotel name"
         }
         metaDescription={
           hotelDetails.hotel_Landmark
@@ -23,7 +25,7 @@ export default function Index({ hotelDetails }: { hotelDetails: any }) {
             ? hotelDetails.hotel_Image_Url
             : "https://images.staybook.in/Staybook-Hotel-Jai-Balaji-New-Delhi-Railway-Station/StaybookJaibalaji_reception_1.jpg"
         }
-        canonicalUrl={`https://staybook.in/hotels/${router.query.hotelInfo}`}
+        canonicalUrl={`https://twitter-image-try.vercel.app/hotels/${router.query.hotelInfo}`}
       />
       <section>
         <div>
