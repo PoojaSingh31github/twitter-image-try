@@ -14,17 +14,29 @@ export default function index() {
           "https://twitter-image-try-poojasingh31githubs-projects.vercel.app/hotels"
         }
       /> */}
-      <Head><meta property="og:title" content="Philippine Standard Geographic Code API" />
-<meta property="og:site_name" content="Wareneutron - PSGC API" />
-<meta property="og:description" content="API used for listing all the region, province, city, municipality, barangay, and its data. Philippine Standard Geographic Codes (PSGC) data came from Philippine Statistics Authority." />
-<meta property="og:url" content="https://psgc-api.wareneutron.com/" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="/assets/wareneutron_psgc_api_opengraph.jpg" />
-<meta property="og:image:alt" content="PSGC Banner" />
-<meta property="og:image:width" content="1280" />
-<meta property="og:image:height" content="640" />
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:image:alt" content="PSGC API Banner" /></Head>
+      <Head>
+        {/* Open Graph */}
+        <meta property="og:title" content="Title" />
+        <meta property="og:site_name" content="Staybook" />
+        <meta property="og:url" content="https://staybook.in" />
+        <meta property="og:description" content="Lorem ipsum" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://staybook.in/_next/image?url=https%3A%2F%2Fimages.staybook.in%2FStaybook-Hotel-Jai-Balaji-New-Delhi-Railway-Station%2FStaybookJaibalaji_reception_1.jpg&w=384&q=75"
+        />{" "}
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@staybook" />
+        <meta name="twitter:description" content="Lorem ipsum" />
+        <meta name="twitter:app:name:iphone" content="staybook" />
+        <meta name="twitter:app:id:iphone" content="" />
+        <meta name="twitter:app:name:ipad" content="staybook" />
+        <meta name="twitter:app:id:ipad" content="" />
+        <meta name="twitter:app:name:googleplay" content="staybook" />
+        <meta name="twitter:app:id:googleplay" content="" />
+        <meta name="twitter:app:country" content="" />
+      </Head>
       <section>
         <h1>hotel pageeee</h1>
         <Link href="/hotels/staybook-hotel-jai-balaji-new-delhi-railway-station-new-delhi">
