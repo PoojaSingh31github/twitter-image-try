@@ -2,18 +2,28 @@ import CustomHotelHeader from "@/components/headers/CustomHotelHeader";
 import axios from "axios";
 import { GetServerSidePropsContext } from "next";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function Index({ hotelDetails }: { hotelDetails: any }) {
-  console.log(hotelDetails.hotel_Image_Url);
+  const router = useRouter();
+  console.log(router.query.hotelInfo);
   return (
     <>
       <CustomHotelHeader
-        hotelName={"jai bala ji "}
-        metaDescription={"lorem ipsum"}
-        metaImageUrl={
-          "https://images.staybook.in/Staybook-Hotel-Jai-Balaji-New-Delhi-Railway-Station/StaybookJaibalaji_reception_1.jpg"
+        hotelName={
+          hotelDetails.hotel_Name ? hotelDetails.hotel_Name : "Staybook hotel name"
         }
-        canonicalUrl={"staybook.in"}
+        metaDescription={
+          hotelDetails.hotel_Landmark
+            ? hotelDetails.hotel_Landmark
+            : "lorem ipsum"
+        }
+        metaImageUrl={
+          hotelDetails.hotel_Image_Url
+            ? hotelDetails.hotel_Image_Url
+            : "https://images.staybook.in/Staybook-Hotel-Jai-Balaji-New-Delhi-Railway-Station/StaybookJaibalaji_reception_1.jpg"
+        }
+        canonicalUrl={`https://staybook.in/hotels/${router.query.hotelInfo}`}
       />
       <section>
         <div>
@@ -34,15 +44,14 @@ export default function Index({ hotelDetails }: { hotelDetails: any }) {
 async function getHotelDetails(hotelSlug: string) {
   try {
     const res = await axios.get(
-      `https://staybook-api-server-mu3dpypziq-el.a.run.app/hotels/fetch/fetchHotelInfo?hotel_Id=${encodeURIComponent(
+      `https://staybook-api-server-mu3dpypziq-uc.a.run.app/hotels/fetch/fetchHotelInfo?hotel_Id=${encodeURIComponent(
         hotelSlug
       )}`
     );
-    console.log(res);
     return res.data;
   } catch (error) {
     console.error("Error fetching hotel details:", error);
-    throw error; // Rethrow the error to handle it in the calling function
+    throw error;
   }
 }
 
