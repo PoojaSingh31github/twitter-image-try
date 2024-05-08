@@ -9,9 +9,7 @@ export default function Index({ hotelDetails }: { hotelDetails: any }) {
       <CustomHotelHeader
         hotelName={"jai bala ji "}
         metaDescription={"descrriptions"}
-        metaImageUrl={
-          "https://staybook.in/_next/image?url=https%3A%2F%2Fimages.staybook.in%2FStaybook-Hotel-Jai-Balaji-New-Delhi-Railway-Station%2FStaybookJaibalaji_reception_1.jpg&w=384&q=75"
-        }
+        metaImageUrl={"../../../public/img/1.jpeg"}
         canonicalUrl={"staybook.in"}
       />
       <section>

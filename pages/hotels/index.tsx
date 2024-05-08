@@ -1,5 +1,7 @@
 import CustomHotelHeader from "@/components/headers/CustomHotelHeader";
 import Link from "next/link";
+import one from "../../public/img/1.jpeg";
+import two from "../../public/img/2.jpeg";
 
 export default function index() {
   return (
@@ -7,9 +9,7 @@ export default function index() {
       <CustomHotelHeader
         hotelName={"jai bala ji "}
         metaDescription={"loremmmmmmmmmm"}
-        metaImageUrl={
-          "https://staybook.in/_next/image?url=https%3A%2F%2Fimages.staybook.in%2FStaybook-Hotel-Jai-Balaji-New-Delhi-Railway-Station%2FStaybookJaibalaji_reception_1.jpg&w=384&q=75"
-        }
+        metaImageUrl={"../../public/img/1.jpeg"}
         canonicalUrl={"staybook.in"}
       />
       <section>
