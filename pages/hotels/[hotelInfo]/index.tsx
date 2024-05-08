@@ -25,7 +25,7 @@ export default function Index({ hotelDetails }: { hotelDetails: any }) {
             ? hotelDetails.hotel_Image_Url
             : "https://images.staybook.in/Staybook-Hotel-Jai-Balaji-New-Delhi-Railway-Station/StaybookJaibalaji_reception_1.jpg"
         }
-        canonicalUrl={`https://twitter-image-try.vercel.app/hotels/${router.query.hotelInfo}`}
+        canonicalUrl={`https://twitter-image-try-poojasingh31githubs-projects.vercel.app/hotels/${router.query.hotelInfo}`}
       />
       <section>
         <div>

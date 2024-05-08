@@ -13,7 +13,9 @@ export default function index({}: Props) {
         metaImageUrl={
           "https://images.staybook.in/Staybook-Hotel-Jai-Balaji-New-Delhi-Railway-Station/StaybookJaibalaji_reception_1.jpg"
         }
-        canonicalUrl={"https://twitter-image-try.vercel.app"}
+        canonicalUrl={
+          "https://twitter-image-try-poojasingh31githubs-projects.vercel.app"
+        }
       />
       <div>
         <Link href="/hotels">

@@ -12,7 +12,9 @@ export default function index() {
         metaImageUrl={
           "https://images.staybook.in/Staybook-Hotel-Jai-Balaji-New-Delhi-Railway-Station/StaybookJaibalaji_reception_1.jpg"
         }
-        canonicalUrl={"https://twitter-image-try.vercel.app/hotels"}
+        canonicalUrl={
+          "https://twitter-image-try-poojasingh31githubs-projects.vercel.app/hotels"
+        }
       />
       <section>
         <h1>hotel pageeee</h1>
