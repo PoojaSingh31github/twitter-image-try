@@ -4,12 +4,15 @@ import { GetServerSidePropsContext } from "next";
 import Image from "next/image";
 
 export default function Index({ hotelDetails }: { hotelDetails: any }) {
+  console.log(hotelDetails.hotel_Image_Url);
   return (
     <>
       <CustomHotelHeader
         hotelName={"jai bala ji "}
-        metaDescription={"descrriptions"}
-        metaImageUrl={"../../../public/img/1.jpeg"}
+        metaDescription={"lorem ipsum"}
+        metaImageUrl={
+          "https://images.staybook.in/Staybook-Hotel-Jai-Balaji-New-Delhi-Railway-Station/StaybookJaibalaji_reception_1.jpg"
+        }
         canonicalUrl={"staybook.in"}
       />
       <section>
